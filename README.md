@@ -47,3 +47,13 @@ If you need a precompiled exe you can download it from here:</BR>
 https://github.com/JonnyBanana/Contact_Bot/releases/tag/v1.0.0
 
 </BR>
+
+
+
+If you decide to use the exe file, the vcf files will be created in the same location </BR>
+where you are using the program, if you have to use the "Merge Contacts" function </BR>
+make sure you have the vcf files in the same path as the program.
+</BR>
+Note that the file is portable and does not require installation.
+
+</BR>
