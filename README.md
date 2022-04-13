@@ -26,4 +26,6 @@ However, a small adjustment to the if else conditions was enough to make the pro
 </BR>
 
 
-P.S. I could have put a backup function in a specific folder, but I didn't have the time or the inclination ... I just needed a simple program to write and use, and that's it ... Cheers
+P.S. I could have put a backup function in a specific folder, but I didn't have the time or the inclination...
+I just needed a simple program to write and use, and that's it... 
+Cheers
