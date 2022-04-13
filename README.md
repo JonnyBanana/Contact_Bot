@@ -13,7 +13,7 @@ Simple program to create, export, or merge multiple files with .vcf extension
 
 
 I was looking for a simple program to quickly compile files with .vcf extension (Compatible with Android - Windows - Gmail - etc.).
-I found on the net (I don't remember where, but redo here on github) a simple script in dos of a certain BL4CKH47H4CK3R (unfortunately I can no longer find the source ...), the basic idea was very good, but the script had some bugs, especially some loops that were infinite ...
+I found on the net (I don't remember where, but redo here on github) a simple script in dos of a certain BL4CKH47H4CK3R (unfortunately I can no longer find the source ...), the basic idea was very good, but the script had some bugs, especially some loops that were infinite.
 
 However, a small adjustment to the if else conditions was enough to make the program fully functional, I also added a function that I needed a lot in everyday working life, that is the "merge contacts" function that allows you to merge multiple vcf files in one file.
 
@@ -58,6 +58,6 @@ make sure you have the vcf files in the same path as the program.
 
 Note that the file is portable and does not require installation.</BR>
 So if for example you launch the program from your Desktop, </BR>
-the vcf files will be created in that same location
+the vcf files will be created in that same location.
 
 </BR>
