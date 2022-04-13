@@ -35,7 +35,7 @@ Cheers
 
 
 
-COMPILATION INSTRUCTIONS
+<b>COMPILATION INSTRUCTIONS</b>
 
 To compile the DOS file you can use the freeware program</BR>
 "Bat To Exe Converter" or similar.</BR>
