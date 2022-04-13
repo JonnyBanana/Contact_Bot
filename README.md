@@ -37,8 +37,8 @@ Cheers
 
 COMPILATION INSTRUCTIONS
 
-To compile the DOS file you can use the freeware program
-"Bat To Exe Converter" or similar.
+To compile the DOS file you can use the freeware program</BR>
+"Bat To Exe Converter" or similar.</BR>
 In the "img" folder you will also find the .ico file to match.
 
 </BR>
