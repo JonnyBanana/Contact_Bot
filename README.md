@@ -29,3 +29,16 @@ However, a small adjustment to the if else conditions was enough to make the pro
 P.S. I could have put a backup function in a specific folder, but I didn't have the time or the inclination...</BR>
 I just needed a simple program to write and use, and that's it... </BR>
 Cheers
+
+
+</BR>
+
+
+
+COMPILATION INSTRUCTIONS
+
+To compile the DOS file you can use the freeware program
+"Bat To Exe Converter" or similar.
+In the "img" folder you will also find the .ico file to match.
+
+</BR>
