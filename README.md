@@ -42,3 +42,8 @@ To compile the DOS file you can use the freeware program</BR>
 In the "img" folder you will also find the .ico file to match.
 
 </BR>
+
+If you need a precompiled exe you can download it from here:</BR>
+https://github.com/JonnyBanana/Contact_Bot/releases/tag/v1.0.0
+
+</BR>
