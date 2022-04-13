@@ -53,7 +53,11 @@ https://github.com/JonnyBanana/Contact_Bot/releases/tag/v1.0.0
 If you decide to use the exe file, the vcf files will be created in the same location </BR>
 where you are using the program, if you have to use the "Merge Contacts" function </BR>
 make sure you have the vcf files in the same path as the program.
+
 </BR>
-Note that the file is portable and does not require installation.
+
+Note that the file is portable and does not require installation.</BR>
+So if for example you launch the program from your Desktop, </BR>
+the vcf files will be created in that same location
 
 </BR>
