@@ -1,32 +1,11 @@
 @echo off
-REM ContactToolkit by JoNnYbAnAnA
-REM
-REM
-REM
-REM
+REM ContacttBot by JoNnYbAnAnA
+REM https://github.com/JonnyBanana/Contact_Bot/blob/main/Contact_Bot.bat
+REM Create, Export, and Merge multiple vcf files
+REM A fork of Contact Toolkit by BL4CKH47H4CK3R
 title ContactBot
 color 04
-mode 93,30
-rem md ContactToolkit
-rem cd ContactToolkit
-cls
-echo.
-echo.
-echo 				CAUTION!
-echo.	
-echo 	BEFORE CONTINUING, MAKE SURE YOU DO NOT HAVE .VCF 
-echo.
-echo 	FILES IN THE ROOT OF THE PROGRAM, BECAUSE THEY WILL
-echo.
-echo 	BE DELETED BY THE PROGRAM, WHEN YOU USE THE
-echo.
-echo 	"CREATE AND EXPORT CONTACTS" FUNCTION!
-echo.
-echo.
-echo.
-pause
-goto masterchoice
-:masterchoice
+mode 92,30
 cls
 echo.
 echo.
@@ -34,27 +13,27 @@ echo.
 echo                      ษออออออออออออออออออออออออออออออออออออออออออออออออออป
 echo                      บ                    Contact_Bot                   บ
 echo                      ฬออออออออออออออออออออออออออออออออออออออออออออออออออน
-echo                      บ     Ceate, Export, and Merge (vCard) Contacts    บ
+echo                      บ              Export Contacts (vCard)             บ
 echo                      ฬออออออออออออออออออออออออออออออออออออออออออออออออออน
 echo                      บ                ***By JONNYBANANA***              บ
 echo                      ศออออออออออออออออออออออออออออออออออออออออออออออออออผ
 echo.
 echo.
 echo.
-echo [1] Create and Export Contacts
-echo [2] Merge Multiple vcf
+goto masterchoice
+:masterchoice
+echo [1] Create Contacts
+echo [2] Export Contacts
+echo [3] Merge Multiple vcf
 echo.
-choice /c:123 /n /m "[*] Enter Your Choice [1,2] : "
-if errorlevel 2 goto merge
+choice /c:123 /n /m "[*] Enter Your Choice [1,2,3] : "
+if errorlevel 3 goto merge
+if errorlevel 2 goto export
 if errorlevel 1 goto create
 :create
 echo.
 echo.
 cls
-REM You must first delete any vcf files in the folder to avoid overlapping telephone contacts
-IF EXIST *.vcf del *.vcf
-goto dothemagic
-:dothemagic
 echo.
 echo.
 echo.
@@ -64,6 +43,8 @@ echo                      *อออออออออออออออออออออออออออออออออออออออออออออออออออ*
 echo.
 echo.
 echo.
+REM You must first delete any vcf files in the folder to avoid overlapping telephone contacts
+del *.vcf
 echo.
 echo Enter the Contact Name and Phone Number
 echo.
@@ -76,16 +57,12 @@ echo N:%name%;;;>>"%name%".vcf
 echo FN:%name%>>"%name%".vcf
 echo TEL;CELL:%number%>>"%name%".vcf
 echo END:VCARD>>"%name%".vcf
-pause
-cls
-echo.
-echo.
 echo [1] Add More Contacts
 echo [2] Export Contacts
 echo.
 choice /c:12 /n /m "[*] Enter Your Choice [1,2] : "
 if errorlevel 2 goto export
-if errorlevel 1 goto dothemagic
+if errorlevel 1 goto create
 :export
 cls
 echo.
@@ -102,15 +79,9 @@ echo.
 type *.vcf > Contacts.txt
 del *.vcf
 ren Contacts.txt Exported_Contacts.vcf
-timeout /t 3 /nobreak>nul
-cls
 echo.
-echo ALL CONTACTS HAVE BEEN CORRECTLY 
-echo.
-echo EXPORTED TO THE FILE "Exported_Contacts.vcf"
-echo.
-REM move *.* ..
-REM del *.vcf
+move *.* ..
+del *.vcf
 timeout /t 2 /nobreak>nul
 echo.
 pause
@@ -122,42 +93,24 @@ echo.
 echo.
 echo.
 echo                      ษออออออออออออออออออออออออออออออออออออออออออออออออออป
-echo                      บ                  Merge Contacts                  บ
+echo                      บ                  Merge Contacts                 บ
 echo                      ศออออออออออออออออออออออออออออออออออออออออออออออออออผ
 echo.
 echo.
 echo.
-echo CAUTION!
-echo.
-echo Insert the .vcf files in the ROOT of the program, and make sure that inside the folder 
-echo there are EXCLUSIVELY the .vcf files you want to merge!
-echo.
-echo The program will merge all the files with the .vcf extension that it finds inside the folder.
-echo Before performing the merge make sure that there are no other .vcf files in the root and 
-echo that there are only the files you want to merge!
+echo prova poi vediamo...
 echo.
 echo.
-pause
-cls
-echo .
 echo Merging All Contacts . . .
 echo.
 type *.vcf > Contacts.txt
-rem del *.vcf
+del *.vcf
 ren Contacts.txt Merged_Contacts.vcf
 echo.
-rem move *.* ..
-rem del *.vcf
+move *.* ..
+del *.vcf
 timeout /t 2 /nobreak>nul
-echo The file "Merged_Contacts.vcf" was created successfully!
-echo.
-echo CAUTION!
-echo. 
-echo REMEMBER TO BACKUP THE .vcf FILES LOCATED IN THE PROGRAM ROOT BEFORE USING THE OTHER PROGRAM FUNCTIONS!
-echo The "Create Contacts" function delete all the .vcf files contained in the 
-echo program root before performing their work! 
 echo.
 pause
 echo.
-cls
 goto masterchoice
