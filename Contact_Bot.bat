@@ -25,8 +25,12 @@ goto masterchoice
 echo [1] Create Contacts
 echo [2] Export Contacts
 echo [3] Merge Multiple vcf
+echo [4] Create Redeable Contacts File
+echo [5] Exit
 echo.
-choice /c:123 /n /m "[*] Enter Your Choice [1,2,3] : "
+choice /c:12345 /n /m "[*] Enter Your Choice [1,2,3,4,5] : "
+if errorlevel 5 exit
+if errorlevel 4 goto odt
 if errorlevel 3 goto merge
 if errorlevel 2 goto export
 if errorlevel 1 goto create
@@ -98,10 +102,7 @@ echo                      ศออออออออออออออออออออออออออออออออออออออออออออออออออผ
 echo.
 echo.
 echo.
-echo prova poi vediamo...
-echo.
-echo.
-echo Merging All Contacts . . .
+echo Merging All Contacts...
 echo.
 type *.vcf > Contacts.txt
 del *.vcf
@@ -110,6 +111,37 @@ echo.
 move *.* ..
 del *.vcf
 timeout /t 2 /nobreak>nul
+echo.
+pause
+echo.
+goto masterchoice
+:odt
+cls
+echo.
+echo.
+echo.
+echo                      ษออออออออออออออออออออออออออออออออออออออออออออออออออป
+echo                      บ           Create Redeable Contacts File          บ
+echo                      ศออออออออออออออออออออออออออออออออออออออออออออออออออผ
+echo.
+echo.
+echo.
+echo Creating the .odt file...
+echo.
+echo.
+IF EXIST "REDEABLE_VCF" (
+goto odttwo
+) ELSE (
+mkdir REDEABLE_VCF
+goto odttwo
+)
+:odttwo
+copy *.vcf "REDEABLE_VCF"
+ren *.vcf *.odt
+move *.odt "REDEABLE_VCF"
+timeout /t 2 /nobreak>nul
+echo File Created Successfully!
+echo.
 echo.
 pause
 echo.
